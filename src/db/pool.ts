@@ -4,11 +4,11 @@ import dotenv from 'dotenv';
 dotenv.config();
 // I use my  local  database and credentials
 export const pool = new Pool({
-  host:'localhost',
+  host:'localhost',   // my  local computer port 
   port: 5432,
-  user: 'postgres',
-  password: '123',
-  database: 'database',
+  user: 'postgres',   // my  username
+  password: '123',  // my  password
+  database: 'database',  // my database
 });
 
 // Test connection on startup
