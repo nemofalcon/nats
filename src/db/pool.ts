@@ -2,7 +2,7 @@ import { Pool } from 'pg';
 import dotenv from 'dotenv';
 
 dotenv.config();
-
+// I use my  local  database and credentials
 export const pool = new Pool({
   host:'localhost',
   port: 5432,
