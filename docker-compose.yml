@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  nats:
+    image: nats:latest
+    container_name: nats-server
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    command: -js
+    restart: always
+
+  nats-init:
+    image: natsio/nats-box:latest
+    depends_on:
+      - nats
+    entrypoint: ["sh", "/init-nats.sh"]
+    volumes:
+      - ./scripts/init-nats.sh:/init-nats.sh
+    restart: "no"  
+
+volumes:
+  pgdata:

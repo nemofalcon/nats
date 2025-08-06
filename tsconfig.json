@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    // boshqa optionlar...
+    "module": "CommonJS", // yoki "NodeNext" (tavsiya etiladi Node.js uchun)
+    "moduleResolution": "Node",
+    "verbatimModuleSyntax": false, // bu xatoni yo'q qiladi
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  }
+}
